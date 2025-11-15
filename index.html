@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zombies Leaderboard</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+
+      /* Hide radio inputs */
+      input[name="score"] {
+        display: none;
+      }
+
+      /* Style labels like buttons */
+      label.button {
+        display: inline-block;
+        padding: 6px 12px;
+        margin-right: 5px;
+        border: 1px solid black;
+        border-radius: 4px;
+        background-color: #eee;
+        cursor: pointer;
+      }
+
+      /* Highlight active button */
+      input[name="score"]:checked + label.button {
+        background-color: #ccc;
+        font-weight: bold;
+      }
+
+      /* Hide all tables */
+      .table-container {
+        display: none;
+        margin-top: 20px;
+      }
+
+      /* Show table corresponding to checked radio */
+      #solo:checked ~ #solo-table,
+      #duo:checked ~ #duo-table,
+      #trio:checked ~ #trio-table,
+      #quad:checked ~ #quad-table,
+      #quint:checked ~ #quint-table,
+      #sextet:checked ~ #sextet-table,
+      #septet:checked ~ #septet-table,
+      #octet:checked ~ #octet-table {
+        display: block;
+      }
+
+      /* Table styling */
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-bottom: 20px;
+      }
+
+      th, td {
+        border: 1px solid black;
+        padding: 6px;
+        text-align: center;
+      }
+
+      /* Map row styling */
+      .map-row {
+        background-color: black;
+        color: white;
+        font-weight: bold;
+      }
+      .map-row td {
+        border: 1px solid white;
+      }
+
+      /* Player/instruction row styling */
+      .player-row {
+        background-color: white;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- Radio buttons styled as buttons -->
+    <input type="radio" name="score" id="solo" checked>
+    <label for="solo" class="button">SOLO SCORES</label>
+
+    <input type="radio" name="score" id="duo">
+    <label for="duo" class="button">DUO SCORES</label>
+
+    <input type="radio" name="score" id="trio">
+    <label for="trio" class="button">TRIO SCORES</label>
+
+    <input type="radio" name="score" id="quad">
+    <label for="quad" class="button">QUAD SCORES</label>
+
+    <input type="radio" name="score" id="quint">
+    <label for="quint" class="button">QUINT SCORES</label>
+
+    <input type="radio" name="score" id="sextet">
+    <label for="sextet" class="button">SEXTET SCORES</label>
+
+    <input type="radio" name="score" id="septet">
+    <label for="septet" class="button">SEPTET SCORES</label>
+
+    <input type="radio" name="score" id="octet">
+    <label for="octet" class="button">OCTET SCORES</label>
+
+    <!-- SOLO TABLE -->
+    <div id="solo-table" class="table-container">
+      <table>
+        <tr>
+          <th>Name</th><th>Score</th><th>Kills</th><th>Downs</th>
+          <th>Revives</th><th>Headshots</th><th>Round #</th><th>Ended</th>
+        </tr>
+        <tr class="map-row"><td colspan="8">Hangar</td></tr>
+        <tr class="player-row"><td>Jackson Sprouse</td><td>S:920</td><td>K:93</td><td>D:3</td><td>R:3</td><td>HS:66</td><td>R#:8</td><td>Died</td></tr>
+        <tr class="map-row"><td colspan="8">F4ll</td></tr>
+        <tr class="map-row"><td colspan="8">House</td></tr>
+        <tr class="map-row"><td colspan="8">B1ooD Version 4</td></tr>
+        <tr class="player-row"><td>Jackson Sprouse</td><td>S:10180</td><td>K:566</td><td>D:3</td><td>R:3</td><td>HS:451</td><td>R#:21</td><td>Died</td></tr>
+        <tr class="map-row"><td colspan="8">Bunker Defense</td></tr>
+        <tr class="map-row"><td colspan="8">Christmas Special</td></tr>
+        <tr class="player-row"><td>Jackson Sprouse</td><td>S:20710</td><td>K:616</td><td>D:3</td><td>R:3</td><td>HS:494</td><td>R#:20</td><td>Died</td></tr>
+        <tr class="map-row"><td colspan="8">Warehouse</td></tr>
+        <tr class="map-row"><td colspan="8">Loop</td></tr>
+        <tr class="map-row"><td colspan="8">Boxxer</td></tr>
+        <tr class="map-row"><td colspan="8">B1ooD Version 3</td></tr>
+        <tr class="map-row"><td colspan="8">Fegefeuer</td></tr>
+        <tr class="map-row"><td colspan="8">Wahnsinn</td></tr>
+        <tr class="map-row"><td colspan="8">Dung3on</td></tr>
+        <tr class="map-row"><td colspan="8">Temple</td></tr>
+        <tr class="map-row"><td colspan="8">Nacht der Untoten</td></tr>
+        <tr class="player-row"><td>Jackson Sprouse</td><td>S:12870</td><td>K:160</td><td>D:0</td><td>R:0</td><td>HS:137</td><td>R#:9</td><td>Died</td></tr>
+        <tr class="map-row"><td colspan="8">Warehouse (Classic)</td></tr>
+        <tr class="player-row"><td>Jackson Sprouse</td><td>S:12260</td><td>K:369</td><td>D:3</td><td>R:3</td><td>HS:244</td><td>R#:17</td><td>Died</td></tr>
+        <tr class="map-row"><td colspan="8">Firing Range</td></tr>
+        <tr class="map-row"><td colspan="8">Overlook</td></tr>
+      </table>
+    </div>
+
+    <!-- DUO TABLE -->
+    <div id="duo-table" class="table-container">
+      <table>
+        <tr><th>Name</th><th>Score</th><th>Kills</th><th>Downs</th>
+          <th>Revives</th><th>Headshots</th><th>Round #</th><th>Ended</th></tr>
+        <tr class="map-row"><td colspan="8">Hangar</td></tr>
+        <tr class="map-row"><td colspan="8">F4ll</td></tr>
+        <tr class="map-row"><td colspan="8">House</td></tr>
+        <tr class="map-row"><td colspan="8">B1ooD Version 4</td></tr>
+        <tr class="map-row"><td colspan="8">Bunker Defense</td></tr>
+        <tr class="map-row"><td colspan="8">Christmas Special</td></tr>
+        <tr class="map-row"><td colspan="8">Warehouse</td></tr>
+        <tr class="map-row"><td colspan="8">Loop</td></tr>
+        <tr class="map-row"><td colspan="8">Boxxer</td></tr>
+        <tr class="map-row"><td colspan="8">B1ooD Version 3</td></tr>
+        <tr class="map-row"><td colspan="8">Fegefeuer</td></tr>
+        <tr class="map-row"><td colspan="8">Wahnsinn</td></tr>
+        <tr class="map-row"><td colspan="8">Dung3on</td></tr>
+        <tr class="map-row"><td colspan="8">Temple</td></tr>
+        <tr class="map-row"><td colspan="8">Nacht der Untoten</td></tr>
+        <tr class="map-row"><td colspan="8">Warehouse (Classic)</td></tr>
+        <tr class="player-row"><td>Jackson Sprouse</td><td>S:4620</td><td>K:76</td><td>D:2</td><td>R:2</td><td>HS:44</td><td>R#:8</td><td>Quit</td></tr>
+        <tr class="player-row"><td>Jaxson Charles-Jessick</td><td>S:3210</td><td>K:52</td><td>D:4</td><td>R:4</td><td>HS:15</td><td>R#:8</td><td>Quit</td></tr>
+        <tr class="map-row"><td colspan="8">Firing Range</td></tr>
+        <tr class="map-row"><td colspan="8">Overlook</td></tr>
+      </table>
+    </div>
+
+    <!-- TRIO TABLE -->
+    <div id="trio-table" class="table-container">
+      <table>
+        <tr><th>Name</th><th>Score</th><th>Kills</th><th>Downs</th>
+          <th>Revives</th><th>Headshots</th><th>Round #</th><th>Ended</th></tr>
+        <tr class="map-row"><td colspan="8">Hangar</td></tr>
+        <tr class="map-row"><td colspan="8">F4ll</td></tr>
+        <tr class="map-row"><td colspan="8">House</td></tr>
+        <tr class="map-row"><td colspan="8">B1ooD Version 4</td></tr>
+        <tr class="map-row"><td colspan="8">Bunker Defense</td></tr>
+        <tr class="map-row"><td colspan="8">Christmas Special</td></tr>
+        <tr class="map-row"><td colspan="8">Warehouse</td></tr>
+        <tr class="map-row"><td colspan="8">Loop</td></tr>
+        <tr class="map-row"><td colspan="8">Boxxer</td></tr>
+        <tr class="map-row"><td colspan="8">B1ooD Version 3</td></tr>
+        <tr class="map-row"><td colspan="8">Fegefeuer</td></tr>
+        <tr class="map-row"><td colspan="8">Wahnsinn</td></tr>
+        <tr class="map-row"><td colspan="8">Dung3on</td></tr>
+        <tr class="map-row"><td colspan="8">Temple</td></tr>
+        <tr class="map-row"><td colspan="8">Nacht der Untoten</td></tr>
+        <tr class="map-row"><td colspan="8">Warehouse (Classic)</td></tr>
+        <tr class="map-row"><td colspan="8">Firing Range</td></tr>
+        <tr class="map-row"><td colspan="8">Overlook</td></tr>
+      </table>
+    </div>
+
+    <!-- QUAD TABLE -->
+    <div id="quad-table" class="table-container">
+      <table>
+        <tr><th>Name</th><th>Score</th><th>Kills</th><th>Downs</th>
+          <th>Revives</th><th>Headshots</th><th>Round #</th><th>Ended</th></tr>
+        <tr class="map-row"><td colspan="8">Hangar</td></tr>
+        <tr class="map-row"><td colspan="8">F4ll</td></tr>
+        <tr class="map-row"><td colspan="8">House</td></tr>
+        <tr class="map-row"><td colspan="8">B1ooD Version 4</td></tr>
+        <tr class="map-row"><td colspan="8">Bunker Defense</td></tr>
+        <tr class="map-row"><td colspan="8">Christmas Special</td></tr>
+        <tr class="map-row"><td colspan="8">Warehouse</td></tr>
+        <tr class="map-row"><td colspan="8">Loop</td></tr>
+        <tr class="map-row"><td colspan="8">Boxxer</td></tr>
+        <tr class="map-row"><td colspan="8">B1ooD Version 3</td></tr>
+        <tr class="map-row"><td colspan="8">Fegefeuer</td></tr>
+        <tr class="map-row"><td colspan="8">Wahnsinn</td></tr>
+        <tr class="map-row"><td colspan="8">Dung3on</td></tr>
+        <tr class="map-row"><td colspan="8">Temple</td></tr>
+        <tr class="map-row"><td colspan="8">Nacht der Untoten</td></tr>
+        <tr class="map-row"><td colspan="8">Warehouse (Classic)</td></tr>
+        <tr class="map-row"><td colspan="8">Firing Range</td></tr>
+        <tr class="map-row"><td colspan="8">Overlook</td></tr>
+      </table>
+    </div>
+
+    <!-- QUINT TABLE -->
+    <div id="quint-table" class="table-container">
+      <table>
+        <tr><th>Name</th><th>Score</th><th>Kills</th><th>Downs</th>
+          <th>Revives</th><th>Headshots</th><th>Round #</th><th>Ended</th></tr>
+        <tr class="map-row"><td colspan="8">Hangar</td></tr>
+        <tr class="map-row"><td colspan="8">F4ll</td></tr>
+        <tr class="map-row"><td colspan="8">House</td></tr>
+        <tr class="map-row"><td colspan="8">B1ooD Version 4</td></tr>
+        <tr class="map-row"><td colspan="8">Bunker Defense</td></tr>
+        <tr class="map-row"><td colspan="8">Christmas Special</td></tr>
+        <tr class="map-row"><td colspan="8">Warehouse</td></tr>
+        <tr class="map-row"><td colspan="8">Loop</td></tr>
+        <tr class="map-row"><td colspan="8">Boxxer</td></tr>
+        <tr class="map-row"><td colspan="8">B1ooD Version 3</td></tr>
+        <tr class="map-row"><td colspan="8">Fegefeuer</td></tr>
+        <tr class="map-row"><td colspan="8">Wahnsinn</td></tr>
+        <tr class="map-row"><td colspan="8">Dung3on</td></tr>
+        <tr class="map-row"><td colspan="8">Temple</td></tr>
+        <tr class="map-row"><td colspan="8">Nacht der Untoten</td></tr>
+        <tr class="map-row"><td colspan="8">Warehouse (Classic)</td></tr>
+        <tr class="map-row"><td colspan="8">Firing Range</td></tr>
+        <tr class="map-row"><td colspan="8">Overlook</td></tr>
+      </table>
+    </div>
+
+    <!-- SEXTET TABLE -->
+    <div id="sextet-table" class="table-container">
+      <table>
+        <tr><th>Name</th><th>Score</th><th>Kills</th><th>Downs</th>
+          <th>Revives</th><th>Headshots</th><th>Round #</th><th>Ended</th></tr>
+        <tr class="map-row"><td colspan="8">Hangar</td></tr>
+        <tr class="map-row"><td colspan="8">F4ll</td></tr>
+        <tr class="map-row"><td colspan="8">House</td></tr>
+        <tr class="map-row"><td colspan="8">B1ooD Version 4</td></tr>
+        <tr class="map-row"><td colspan="8">Bunker Defense</td></tr>
+        <tr class="map-row"><td colspan="8">Christmas Special</td></tr>
+        <tr class="map-row"><td colspan="8">Warehouse</td></tr>
+        <tr class="map-row"><td colspan="8">Loop</td></tr>
+        <tr class="map-row"><td colspan="8">Boxxer</td></tr>
+        <tr class="map-row"><td colspan="8">B1ooD Version 3</td></tr>
+        <tr class="map-row"><td colspan="8">Fegefeuer</td></tr>
+        <tr class="map-row"><td colspan="8">Wahnsinn</td></tr>
+        <tr class="map-row"><td colspan="8">Dung3on</td></tr>
+        <tr class="map-row"><td colspan="8">Temple</td></tr>
+        <tr class="map-row"><td colspan="8">Nacht der Untoten</td></tr>
+        <tr class="map-row"><td colspan="8">Warehouse (Classic)</td></tr>
+        <tr class="map-row"><td colspan="8">Firing Range</td></tr>
+        <tr class="map-row"><td colspan="8">Overlook</td></tr>
+      </table>
+    </div>
+
+    <!-- SEPTET TABLE -->
+    <div id="septet-table" class="table-container">
+      <table>
+        <tr><th>Name</th><th>Score</th><th>Kills</th><th>Downs</th>
+          <th>Revives</th><th>Headshots</th><th>Round #</th><th>Ended</th></tr>
+        <tr class="map-row"><td colspan="8">Hangar</td></tr>
+        <tr class="map-row"><td colspan="8">F4ll</td></tr>
+        <tr class="map-row"><td colspan="8">House</td></tr>
+        <tr class="map-row"><td colspan="8">B1ooD Version 4</td></tr>
+        <tr class="map-row"><td colspan="8">Bunker Defense</td></tr>
+        <tr class="map-row"><td colspan="8">Christmas Special</td></tr>
+        <tr class="map-row"><td colspan="8">Warehouse</td></tr>
+        <tr class="map-row"><td colspan="8">Loop</td></tr>
+        <tr class="map-row"><td colspan="8">Boxxer</td></tr>
+        <tr class="map-row"><td colspan="8">B1ooD Version 3</td></tr>
+        <tr class="map-row"><td colspan="8">Fegefeuer</td></tr>
+        <tr class="map-row"><td colspan="8">Wahnsinn</td></tr>
+        <tr class="map-row"><td colspan="8">Dung3on</td></tr>
+        <tr class="map-row"><td colspan="8">Temple</td></tr>
+        <tr class="map-row"><td colspan="8">Nacht der Untoten</td></tr>
+        <tr class="map-row"><td colspan="8">Warehouse (Classic)</td></tr>
+        <tr class="map-row"><td colspan="8">Firing Range</td></tr>
+        <tr class="map-row"><td colspan="8">Overlook</td></tr>
+      </table>
+    </div>
+
+    <!-- OCTET TABLE -->
+    <div id="octet-table" class="table-container">
+      <table>
+        <tr><th>Name</th><th>Score</th><th>Kills</th><th>Downs</th>
+          <th>Revives</th><th>Headshots</th><th>Round #</th><th>Ended</th></tr>
+        <tr class="map-row"><td colspan="8">Hangar</td></tr>
+        <tr class="map-row"><td colspan="8">F4ll</td></tr>
+        <tr class="map-row"><td colspan="8">House</td></tr>
+        <tr class="map-row"><td colspan="8">B1ooD Version 4</td></tr>
+        <tr class="map-row"><td colspan="8">Bunker Defense</td></tr>
+        <tr class="map-row"><td colspan="8">Christmas Special</td></tr>
+        <tr class="map-row"><td colspan="8">Warehouse</td></tr>
+        <tr class="map-row"><td colspan="8">Loop</td></tr>
+        <tr class="map-row"><td colspan="8">Boxxer</td></tr>
+        <tr class="map-row"><td colspan="8">B1ooD Version 3</td></tr>
+        <tr class="map-row"><td colspan="8">Fegefeuer</td></tr>
+        <tr class="map-row"><td colspan="8">Wahnsinn</td></tr>
+        <tr class="map-row"><td colspan="8">Dung3on</td></tr>
+        <tr class="map-row"><td colspan="8">Temple</td></tr>
+        <tr class="map-row"><td colspan="8">Nacht der Untoten</td></tr>
+        <tr class="map-row"><td colspan="8">Warehouse (Classic)</td></tr>
+        <tr class="map-row"><td colspan="8">Firing Range</td></tr>
+        <tr class="map-row"><td colspan="8">Overlook</td></tr>
+      </table>
+    </div>
+
+  </body>
+</html>
