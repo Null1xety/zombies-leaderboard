@@ -78,9 +78,28 @@
         background-color: white;
         color: black;
       }
+
+      /* Email link styling */
+      .email-link {
+        display: inline-block;
+        margin-bottom: 10px;
+        font-weight: bold;
+        text-decoration: none;
+        color: #0000EE; /* standard link color */
+      }
+      .email-link:hover {
+        text-decoration: underline;
+      }
     </style>
   </head>
   <body>
+
+    <!-- Clickable email link -->
+    <p>
+      <a href="mailto:jacksoncsprouse@gcboe.net" target="_blank" class="email-link">
+        jacksoncsprouse@gcboe.net
+      </a>
+    </p>
 
     <!-- Radio buttons styled as buttons -->
     <input type="radio" name="score" id="solo" checked>
@@ -323,6 +342,5 @@
         <tr class="map-row"><td colspan="8">Overlook</td></tr>
       </table>
     </div>
-
   </body>
 </html>
