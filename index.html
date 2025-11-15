@@ -10,12 +10,10 @@
         margin: 20px;
       }
 
-      /* Hide radio inputs */
       input[name="score"] {
         display: none;
       }
 
-      /* Style labels like buttons */
       label.button {
         display: inline-block;
         padding: 6px 12px;
@@ -26,19 +24,16 @@
         cursor: pointer;
       }
 
-      /* Highlight active button */
       input[name="score"]:checked + label.button {
         background-color: #ccc;
         font-weight: bold;
       }
 
-      /* Hide all tables */
       .table-container {
         display: none;
         margin-top: 20px;
       }
 
-      /* Show table corresponding to checked radio */
       #solo:checked ~ #solo-table,
       #duo:checked ~ #duo-table,
       #trio:checked ~ #trio-table,
@@ -50,7 +45,6 @@
         display: block;
       }
 
-      /* Table styling */
       table {
         border-collapse: collapse;
         width: 100%;
@@ -63,7 +57,6 @@
         text-align: center;
       }
 
-      /* Map row styling */
       .map-row {
         background-color: black;
         color: white;
@@ -73,19 +66,17 @@
         border: 1px solid white;
       }
 
-      /* Player/instruction row styling */
       .player-row {
         background-color: white;
         color: black;
       }
 
-      /* Email link styling */
       .email-link {
         display: inline-block;
         margin-bottom: 10px;
         font-weight: bold;
         text-decoration: none;
-        color: #0000EE; /* standard link color */
+        color: #0000EE;
       }
       .email-link:hover {
         text-decoration: underline;
@@ -94,12 +85,23 @@
   </head>
   <body>
 
-    <!-- Clickable email link -->
     <p>
       <a href="mailto:jacksoncsprouse@gcboe.net" target="_blank" class="email-link">
         jacksoncsprouse@gcboe.net
       </a>
     </p>
+
+    <!-- Textbox message -->
+    <div style="
+      border: 1px solid black;
+      padding: 8px;
+      width: fit-content;
+      margin-bottom: 15px;
+      background-color: #f7f7f7;
+      font-weight: bold;
+    ">
+      LEADERBOARD UPDATES AT END OF DAY
+    </div>
 
     <!-- Radio buttons styled as buttons -->
     <input type="radio" name="score" id="solo" checked>
